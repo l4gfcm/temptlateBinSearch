@@ -2,9 +2,9 @@
 #define BINSEARCH_H
 #include <iterator>
 
-template<class forvardIt, class T>
-forvardIt binSearch(const forvardIt & first, const forvardIt &last, const T elem){
-    typename std::iterator_traits<forvardIt>::difference_type size = distance(first, last);
+template<class forwardIt, class T>
+forwardIt binSearch(const forwardIt & first, const forwardIt &last, const T elem){
+    typename std::iterator_traits<forwardIt>::difference_type size = std::distance(first, last);
     auto midN = size / 2;
     auto mid = first;
     std::advance(mid , midN);
